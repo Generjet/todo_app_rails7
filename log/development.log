@@ -524,3 +524,53 @@ Processing by TodosController#edit as HTML
 Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.1ms | Allocations: 2070)
 
 
+Started GET "/" for ::1 at 2022-06-10 16:28:34 +0800
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TodosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering todos/index.html.erb within layouts/application
+  Rendered todos/_form.html.erb (Duration: 5.8ms | Allocations: 3822)
+  [1m[36mTodo Load (0.1ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/views/todos/index.html.erb:9
+  Rendered collection of todos/_todo.html.erb [7 times] (Duration: 1.1ms | Allocations: 993)
+  Rendered todos/index.html.erb within layouts/application (Duration: 13.0ms | Allocations: 11308)
+  Rendered layout layouts/application.html.erb (Duration: 61.8ms | Allocations: 64916)
+Completed 200 OK in 71ms (Views: 65.0ms | ActiveRecord: 0.6ms | Allocations: 71644)
+
+
+Started GET "/todos/5/edit" for ::1 at 2022-06-10 16:28:37 +0800
+Processing by TodosController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:76:in `set_todo'
+  Rendering todos/edit.html.erb
+  Rendered todos/_form.html.erb (Duration: 3.8ms | Allocations: 1299)
+  Rendered todos/edit.html.erb (Duration: 6.0ms | Allocations: 1698)
+Completed 200 OK in 17ms (Views: 7.1ms | ActiveRecord: 0.5ms | Allocations: 4784)
+
+
+Started GET "/todos/4/edit" for ::1 at 2022-06-10 16:28:38 +0800
+Processing by TodosController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:76:in `set_todo'
+  Rendering todos/edit.html.erb
+  Rendered todos/_form.html.erb (Duration: 3.9ms | Allocations: 1090)
+  Rendered todos/edit.html.erb (Duration: 4.9ms | Allocations: 1253)
+Completed 200 OK in 9ms (Views: 5.9ms | ActiveRecord: 0.2ms | Allocations: 2053)
+
+
+Started GET "/" for ::1 at 2022-06-10 16:28:41 +0800
+Processing by TodosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering todos/index.html.erb within layouts/application
+  Rendered todos/_form.html.erb (Duration: 1.4ms | Allocations: 1019)
+  [1m[36mTodo Load (0.1ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/views/todos/index.html.erb:9
+  Rendered collection of todos/_todo.html.erb [7 times] (Duration: 0.7ms | Allocations: 691)
+  Rendered todos/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2550)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 9232)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.1ms | Allocations: 9579)
+
+
